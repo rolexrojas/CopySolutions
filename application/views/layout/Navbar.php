@@ -8,20 +8,21 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<?php echo base_url(); ?>Home">Home
+              <a class="nav-link" id="Home" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>About">About</a>
+              <a class="nav-link" id="About" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>Services">Services</a>
+              <a class="nav-link" id="Services" href="#">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>Contact">Contact</a>
+                <a class="nav-link" id="Contact" href="#">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+

@@ -8,8 +8,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	
-
+    <script src="assets/jquery/jquery.min.js"></script>	
     <!-- Custom styles for this template -->
     <style>
       body {
@@ -22,3 +21,50 @@
       }
 
     </style>
+    <script>
+$(document).ready(function(){
+$("#Home").on("click", function(){ 
+  $.ajax({
+    url: "http://localhost/CopySolution/index.php/Homepage",
+    method: "GET",
+    success: function(data){
+       
+            $(".mainContainer").empty().append(data);
+        }
+    });
+});
+
+$("#About").on("click", function(){ 
+  $.ajax({
+    url: "http://localhost/CopySolution/index.php/About",
+    method: "GET",
+    success: function(data){
+        
+            $(".mainContainer").empty().append(data);
+        }
+    });
+});
+
+$("#Services").on("click", function(){ 
+  $.ajax({
+    url: "http://localhost/CopySolution/index.php/Services",
+    method: "GET",
+    success: function(data){
+       
+            $(".mainContainer").empty().append(data);
+        }
+    });
+});
+
+$("#Contact").on("click", function(){ 
+  $.ajax({
+    url: "http://localhost/CopySolution/index.php/Contact",
+    method: "GET",
+    success: function(data){
+       
+            $(".mainContainer").html(data);
+        }
+    });
+});
+});
+</script>
