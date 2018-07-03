@@ -7,19 +7,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" id="Home" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="About" href="#">About</a>
+              <span class="sr-only"></span>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="Services" href="#">Services</a>
+              <span class="sr-only" ></span>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="Contact" href="#">Contact</a>
+                <span class="sr-only"></span>
             </li>
           </ul>
         </div>
