@@ -9,7 +9,7 @@ $(document).ready(function () {
                 $(".nav-item > a#Home").addClass("active");
             }
         });
-        
+});        
     
     //ESTOS BLOQUES DEBAJO, CADA UNO HACE LA CARGA ASINCRONAMENTE DEL CONTENIDO AL CLICKEAR LOS BOTONES DEL NAVBAR.PHP
     $("#Home").on("click", function () {
@@ -26,9 +26,9 @@ $(document).ready(function () {
          
     });
 
-    $("#About").on("click", function () {
+    $("#clients").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/About",
+            url: "http://localhost/CopySolution/index.php/ClientController",
             method: "GET",
             success: function (data) {
 
@@ -40,9 +40,9 @@ $(document).ready(function () {
         
     });
 
-    $("#Services").on("click", function () {
+    $("#inventory").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/Services",
+            url: "http://localhost/CopySolution/index.php/InventoryController",
             method: "GET",
             success: function (data) {
 
@@ -51,9 +51,9 @@ $(document).ready(function () {
         });
     });
 
-    $("#Contact").on("click", function () {
+    $("#workpool").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/Contact",
+            url: "http://localhost/CopySolution/index.php/WorkPoolController",
             method: "GET",
             success: function (data) {
 
@@ -61,5 +61,29 @@ $(document).ready(function () {
             }
         });
     });
-});
+    
+    $("#useraccess").on("click", function () {
+        $.ajax({
+            url: "http://localhost/CopySolution/index.php/UserAccessController",
+            method: "GET",
+            success: function (data) {
+
+                $(".mainContainer").html(data);
+            }
+        });
+    });
+    
+    $("#register").on("click", function () {
+        $.ajax({
+            url: "http://localhost/CopySolution/index.php/RegisterController",
+            method: "GET",
+            success: function (data) {
+
+                $(".mainContainer").html(data);
+            }
+        });
+    });
+    
+   
+
 

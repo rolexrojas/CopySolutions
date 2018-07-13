@@ -1,10 +1,10 @@
 <div class="row">
                 <div class="col-lg-12 text-center" class="mainDiv">
-                    <h1 class="mt-5">Bienvenidos a Copy Solutions</h1>
-                    <p class="lead">Una bolsada para el Sr. Bienvenido Dalmau!</p>
+                    <h1 class="mt-5">Bienvenid@ al Sistema CopySol </h1>
+                    <p class="lead">Sistema de Gestion de trabajo de CopySolutions.</p>
                     <ul class="list-unstyled">
-                        <li>Bootstrap 4.1.1</li>
-                        <li>jQuery 3.3.1</li>
+                        <li>By Ing. Carlos Dalmau</li>
+                        <li>2018</li>
                     </ul>
                 </div>
             </div> 

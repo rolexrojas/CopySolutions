@@ -7,16 +7,10 @@
  */
 
 /**
- * Description of contactController
+ * Description of UserAccess_model
  *
  * @author Roberto Rojas
  */
-class Contact extends CI_Controller{
+class UserAccess_model extends CI_Model{
     //put your code here
-    
-    public function index(){
-        
-        $this->load->view('Contacts_view');
-        
-    }
 }

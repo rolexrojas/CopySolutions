@@ -1,31 +1,40 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Copy Solutions Inc.</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" id="Home" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="About" href="#">About</a>
-              <span class="sr-only"></span>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="Services" href="#">Services</a>
-              <span class="sr-only" ></span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="Contact" href="#">Contact</a>
-                <span class="sr-only"></span>
-            </li>
-          </ul>
-        </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#" id="Home">CopySolutions Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terminos y Condiciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacidad</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulos de Trabajo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#" id="clients" >Módulo de Administración de Perfiles de Clientes</a>
+              <a class="dropdown-item" href="#" id="inventory" >Módulo de Administración de Inventario de Piezas/Equipos Multi-Funcionales</a>
+              <a class="dropdown-item" href="#" id="workpool" >Módulo de Administración de Casos Pendientes de Trabajar</a>
+              <a class="dropdown-item" href="#" id="useraccess" >Módulo de Administración de Roles y Privilegios</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Soporte de Sistemas</a>
+          </li>
+        </ul>
+          <?php if($this->session->userdata('username')){ ?>
+          
+          <span style="color:white;font-weight:bold">Bienvenido  <?php echo $this->session->userdata('username');?>&nbsp;&nbsp;</span>
+          <form class="form-inline my-3 my-lg-0">
+              <a class="btn btn-warning btn-sm my-2 my-sm-0" href="<?php echo base_url(); ?>RegisterController/LogMeOut" >Cerrar Sesión</a>
+          </form>
+          <?php }else{ ?>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="register">Register/Login</button>
+        </form>
+          <?php } ?>
       </div>
     </nav>
-
