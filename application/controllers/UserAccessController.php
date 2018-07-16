@@ -17,4 +17,10 @@ class UserAccessController extends CI_Controller{
 		$this->load->view('UserAccess_view');
                 
 	}
+        
+    public function ShowMeAll(){
+        $query = "SELECCIONA TODOS LOS REGISTROS DE LA BASE DE DATOS";
+        
+         
+    }    
 }

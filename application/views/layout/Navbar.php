@@ -15,10 +15,20 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Módulos de Trabajo</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
+               
+             <?php 
+                if($this->session->userdata('rol')){
+                if($this->session->userdata('rol') == "SUPERVISOR_COMERCIAL"){?>   
               <a class="dropdown-item" href="#" id="clients" >Módulo de Administración de Perfiles de Clientes</a>
+             <?php } if($this->session->userdata('rol') == "SUPERVISOR_COMERCIAL2"){ ?>
               <a class="dropdown-item" href="#" id="inventory" >Módulo de Administración de Inventario de Piezas/Equipos Multi-Funcionales</a>
+              <?php } if($this->session->userdata('rol') == "SUPERVISOR_COMERCIAL"){ ?>
               <a class="dropdown-item" href="#" id="workpool" >Módulo de Administración de Casos Pendientes de Trabajar</a>
-              <a class="dropdown-item" href="#" id="useraccess" >Módulo de Administración de Roles y Privilegios</a>
+              <?php } if($this->session->userdata('rol') == "SUPERVISOR_COMERCIAL"){ ?>
+              <a class="dropdown-item" href="#" id="useraccess" >Módulo de Administración de Accesos, Roles y Privilegios</a>
+                <?php } }else{ ?>
+              <a class="dropdown-item" href="#"><span> Es necesario iniciar sesión para acceder a estas opciones.</span></a>
+                <?php } ?>
             </div>
           </li>
           <li class="nav-item">
@@ -27,13 +37,13 @@
         </ul>
           <?php if($this->session->userdata('username')){ ?>
           
-          <span style="color:white;font-weight:bold">Bienvenido  <?php echo $this->session->userdata('username');?>&nbsp;&nbsp;</span>
+          <span style="color:white;font-weight:bold">Bienvenido &nbsp;<?php echo $this->session->userdata('username');?>&nbsp;&nbsp;</span>
           <form class="form-inline my-3 my-lg-0">
               <a class="btn btn-warning btn-sm my-2 my-sm-0" href="<?php echo base_url(); ?>RegisterController/LogMeOut" >Cerrar Sesión</a>
           </form>
           <?php }else{ ?>
         <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="register">Register/Login</button>
+            <a href="#" class="btn btn-outline-success my-2 my-sm-0" id="register">Register/Login</a>
         </form>
           <?php } ?>
       </div>

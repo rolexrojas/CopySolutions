@@ -48,7 +48,7 @@
 
             <div class="mb-3">
               <label for="email">Correo Electronico</label>
-              <input type="email" class="form-control" id="email" placeholder="tucorreo@copysolutions.com">
+              <input type="email" class="form-control" id="email" placeholder="tucorreo@copysolutions.com" required>
               <div class="invalid-feedback">
                 Favor entrar una dirección de correo valida.
               </div>
@@ -69,7 +69,7 @@
               
             <hr class="mb-4">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="same-address">
+              <input type="checkbox" class="custom-control-input" id="same-address" required>
               <label class="custom-control-label" for="same-address">Al registrarme en este portal estoy aceptando las politicas de privacidad y seguridad de la empresa</label>
             </div>
             <hr class="mb-4">

@@ -26,6 +26,9 @@ class RegisterController extends CI_Controller{
             $password = $this->test_input($_POST["inputPassword"]);
           }
           //Si user valid and user active (will add user active condition from database)
+          //roles: SUPERVISOR_DE_SERIVICIOS / COORDINADORES / 
+          //GERENTE_DE_SERVICIOS / ENCARGADO_DE_ALMACEN / 
+          //REPRESENTANTE_TECNICO / ADMINISTRADOR_SISTEMA
            if($this->isValidUser()){
               // $this->session
                $nombre_empleado = 'John';
@@ -34,7 +37,7 @@ class RegisterController extends CI_Controller{
                $rol_empleado = 'SUPERVISOR_COMERCIAL';
                $no_empleado = '23325';
                $newdata = array(
-                    'username'  => $nombre_empleado + " " + $apellido_empleado,
+                    'username'  => $nombre_empleado." ".$apellido_empleado,
                     'email'     => $mail_empleado,
                     'rol' => $rol_empleado,
                     'no_empleado' => $no_empleado,
