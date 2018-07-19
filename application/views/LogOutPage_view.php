@@ -10,7 +10,7 @@
     <title>GoodBye Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost/CopySolution/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo site_url("/assets/css/bootstrap.min.css"); ?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
@@ -22,6 +22,7 @@
       <footer class="my-5 pt-5 text-muted text-center text-small">
           <p>Usted ha salido de CopySolutions System [Puede cerrar esta pagina y continuar con su navegación]</p>
         <p class="mb-1">&copy;2018 Copy Solutions Inc, CopySol System</p>
+        <a href="<?php echo base_url();?>"> Regrese al Lobby </a>
       </footer>
     </div>
 

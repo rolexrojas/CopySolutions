@@ -39,7 +39,7 @@
           
           <span style="color:white;font-weight:bold">Bienvenido &nbsp;<?php echo $this->session->userdata('username');?>&nbsp;&nbsp;</span>
           <form class="form-inline my-3 my-lg-0">
-              <a class="btn btn-warning btn-sm my-2 my-sm-0" href="<?php echo base_url(); ?>RegisterController/LogMeOut" >Cerrar Sesión</a>
+              <a class="btn btn-warning btn-sm my-2 my-sm-0" href="<?php echo base_url(); ?>index.php/registerController/LogMeOut" >Cerrar Sesión</a>
           </form>
           <?php }else{ ?>
         <form class="form-inline my-2 my-lg-0">

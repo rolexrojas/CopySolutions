@@ -7,7 +7,7 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo site_url("assets/css/bootstrap.min.css"); ?>" rel="stylesheet">
     
     <style> 
    body {

@@ -1,20 +1,25 @@
+var base_url = "http://localhost/CopySolution/index.php";
+
 $(document).ready(function () {
-    //ESTE BLOQUE ES PARA HACER LA CARGA DEL CONTENIDO DEL HOME, LUEGO Q LA PAGINA HAYA CARGADO.
-    $.ajax({
-            url: "http://localhost/CopySolution/index.php/Homepage/loadContent",
+    
+    function reloadMainPage(){
+         $.ajax({
+            url: base_url + "/Homepage/loadContent",
             method: "GET",
             success: function (data) {
 
                 $(".mainContainer").empty().append(data);
                 $(".nav-item > a#Home").addClass("active");
             }
-        });
+        }); 
+    
+    }
 });        
     
     //ESTOS BLOQUES DEBAJO, CADA UNO HACE LA CARGA ASINCRONAMENTE DEL CONTENIDO AL CLICKEAR LOS BOTONES DEL NAVBAR.PHP
     $("#Home").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/Homepage/loadContent",
+            url: base_url + "/Homepage/loadContent",
             method: "GET",
             success: function (data) {
 
@@ -28,7 +33,7 @@ $(document).ready(function () {
 
     $("#clients").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/ClientController",
+            url: base_url + "/Clientcontroller",
             method: "GET",
             success: function (data) {
 
@@ -42,7 +47,7 @@ $(document).ready(function () {
 
     $("#inventory").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/InventoryController",
+            url: base_url + "/Inventorycontroller",
             method: "GET",
             success: function (data) {
 
@@ -53,7 +58,7 @@ $(document).ready(function () {
 
     $("#workpool").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/WorkPoolController",
+            url: base_url + "/Workpoolcontroller",
             method: "GET",
             success: function (data) {
 
@@ -64,7 +69,7 @@ $(document).ready(function () {
     
     $("#useraccess").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/UserAccessController",
+            url: base_url + "/Accesscontroller",
             method: "GET",
             success: function (data) {
 
@@ -75,10 +80,9 @@ $(document).ready(function () {
     
     $("#register").on("click", function () {
         $.ajax({
-            url: "http://localhost/CopySolution/index.php/RegisterController",
+            url: base_url + "/registercontroller",
             method: "GET",
             success: function (data) {
-
                 $(".mainContainer").html(data);
             }
         });

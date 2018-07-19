@@ -10,7 +10,7 @@
     <title>Registro Empleados</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost/CopySolution/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
@@ -28,18 +28,18 @@
       <div class="row">
         <div class="col order-md-1">
           <h4 class="mb-3">Información Personal</h4>
-          <form class="needs-validation" novalidate metho="post" action="RegisterController/RegisterMe">
+          <form class="needs-validation" novalidate method="post" action="<?php echo site_url("index.php/Registercontroller/registerMe");?>">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Primer Nombre</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="firstName" name="nombre_empleado" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Primer nombre válido es requerido.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Primer Apellido</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="lastName" name="apellido_empleado" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Primer apellido válido es requerido.
                 </div>
@@ -48,7 +48,7 @@
 
             <div class="mb-3">
               <label for="email">Correo Electronico</label>
-              <input type="email" class="form-control" id="email" placeholder="tucorreo@copysolutions.com" required>
+              <input type="email" class="form-control" id="email" name="mail_empleado" placeholder="tucorreo@copysolutions.com" required>
               <div class="invalid-feedback">
                 Favor entrar una dirección de correo valida.
               </div>
@@ -57,15 +57,20 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="no_empleado">No. Empleado</label>
-                <input type="text" class="form-control" id="no_empleado" placeholder="" value="" required>
+                <input type="text" class="form-control" id="no_empleado" name="no_empleado" placeholder="" required>
                 <div class="invalid-feedback">
                   Su no. de empleado es requerido.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                
+                  <label for="password">Contraseña <small> (Debe usar 6-12 caracteres)</small></label>
+                  <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="" minlength="6" maxlength="10" required>
+                  <div class="invalid-feedback">
+                  Es requerido introducir su contraseña.
+                </div>
               </div>
             </div>
+              
               
             <hr class="mb-4">
             <div class="custom-control custom-checkbox">
@@ -73,11 +78,6 @@
               <label class="custom-control-label" for="same-address">Al registrarme en este portal estoy aceptando las politicas de privacidad y seguridad de la empresa</label>
             </div>
             <hr class="mb-4">
-
-           
-
-            
-           
             <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar Solicitud de Registro</button>
           </form>
         </div>
